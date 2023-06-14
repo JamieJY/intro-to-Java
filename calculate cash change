@@ -1,0 +1,22 @@
+package cashexange;
+
+import java.util.Scanner;
+
+public class Cash {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Please input the cash amount:");
+		Scanner in = new Scanner(System.in);
+	
+    int amount;
+		amount = in.nextInt();
+		System.out.print("Please input the bill price:");
+		int price;
+		price = in.nextInt();
+		
+    System.out.println(amount+"-"+price+"="+(amount-price));
+		
+	}
+
+}
