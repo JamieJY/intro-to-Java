@@ -1,0 +1,15 @@
+package feettocentimeter;
+
+import java.util.Scanner;
+
+public class Heightconvert {
+	public static void main(String[] args) {
+		int foot;
+		int inch;
+		Scanner in = new Scanner(System.in);
+		foot = in.nextInt();
+		inch = in.nextInt();
+		System.out.println((foot+inch/12.0)*0.3048);
+		// int double nextDouble() 1.2-1.1!= 0.1 浮点计算
+	}
+}
