@@ -1,0 +1,80 @@
+package hello;
+
+import java.util.Scanner;
+
+	public class Hello{
+	public static void main(String[] args) {
+		
+	  Scanner in = new Scanner(System.in);
+	 
+	  Fraction a = new Fraction(in.nextInt(),in.nextInt());
+	  Fraction b = new Fraction(in.nextInt(),in.nextInt());
+	  a.print();
+	  b.print();
+	  a.plus(b).print();
+	  a.multiply(b).plus(new Fraction(5,6)).print();
+	  a.print();
+	  b.print();
+	  in.close();
+	  
+
+	
+	
+	}
+}	
+
+	
+	class Fraction
+{
+	
+	int a;
+	int b;
+
+    Fraction(int a,int b)
+    {
+    	this.a=a;
+    	this.b=b;
+    }
+	double toDouble()
+	{
+    	
+    	return (a*0.1)/b;
+    }
+	
+	Fraction plus(Fraction r)
+	{
+		int b1=b*r.b;
+		int a1=a*r.b+r.a*b;
+		Fraction f=new Fraction(a1,b1);
+		return f;
+	}
+	Fraction multiply(Fraction r)
+	{
+		int b2=b*r.b;
+		int a2=a*r.a;
+		Fraction f2=new Fraction(a2,b2);
+		return f2;
+	}
+	void print()
+	{
+		if(a==b)
+		{
+			System.out.println(1);
+		}
+		else
+		{
+			int c;
+			int a3=a;
+			int b3=b;
+			while(b3!=0)
+			{
+				c=a3%b3;
+				a3=b3;
+				b3=c;
+			}
+			System.out.println(a/a3+"/"+b/a3);
+		}
+		
+	}
+}
+	
