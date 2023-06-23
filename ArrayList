@@ -1,0 +1,26 @@
+package hello;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Distance {
+
+	
+public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	Scanner in = new Scanner(System.in);
+	ArrayList<String> cityName = new ArrayList<String>();
+	String cityshort;
+	while (!(cityshort=in.next()).equals("###")) {
+		cityName.add(cityshort);
+	}
+	int[][]distance = new int[cityName.size()][cityName.size()];
+	for (int i=0;i<cityName.size();i++) {
+		for(int j=0;j<cityName.size();j++) {
+			distance[i][j]=in.nextInt();
+		}
+	}
+	System.out.println(distance[cityName.indexOf(in.next())][cityName.indexOf(in.next())]);
+	
+		
+}
+}
