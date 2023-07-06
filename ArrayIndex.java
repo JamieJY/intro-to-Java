@@ -23,8 +23,9 @@ public class ArrayIndex {
 	public static void k(){
 		try {
 			h();
-			}catch(NullPointerException e) {
+			}catch(ArrayIndexOutOfBoundsException e) {
 				System.out.println("k()");
+				// throw e;
 			}
 	}
 	public static void main(String[] args) {
