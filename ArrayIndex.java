@@ -34,6 +34,9 @@ public class ArrayIndex {
 			
 		}catch (ArrayIndexOutOfBoundsException e) {
 			System.out.println("Caught");
+			System.out.println(e.getMessage());
+			System.out.println("e");
+			e.printStackTrace();
 		}System.out.println("main");
 	}
 
