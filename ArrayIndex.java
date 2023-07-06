@@ -4,19 +4,37 @@ import java.util.Scanner;
 
 public class ArrayIndex {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	public static void f() {
 		int[] a = new int[10];
-		int idx;
-		Scanner in = new Scanner(System.in);
-		idx = in.nextInt();
+		a[10] = 10;
+		System.out.println("hello");
+	
+	}
+	public static void g() {
+		f();
+		}
+	
+	public static void h() {
+		int i=10;
+		if(i<100) {
+			g();
+		}
+	}
+	public static void k(){
 		try {
-			a[idx] = 10;
-			System.out.println("hello");
+			h();
+			}catch(NullPointerException e) {
+				System.out.println("k()");
+			}
+	}
+	public static void main(String[] args) {
+		
+		try {
+			k();
 			
 		}catch (ArrayIndexOutOfBoundsException e) {
 			System.out.println("Caught");
-		}
+		}System.out.println("main");
 	}
 
 }
