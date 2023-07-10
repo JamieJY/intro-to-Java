@@ -1,6 +1,6 @@
 package dome;
 
-public class CD {
+public class CD extends Item {
 	private String title;
 	private String artist;
 	private int numofTracks;
@@ -28,7 +28,7 @@ public class CD {
 
 	public void print() {
 		// TODO Auto-generated method stub
-		System.out.println("CD:"+title+":"+artist);
+		//System.out.println("CD:"+title+","+artist);
 	}
 
 	

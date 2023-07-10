@@ -1,6 +1,6 @@
 package dome;
 
-public class DVD {
+public class DVD extends Item {
 	private String title;
 	private String director;
 	
@@ -33,7 +33,7 @@ public class DVD {
 
 	public void print() {
 		// TODO Auto-generated method stub
-		System.out.println("DVD:"+title+":"+director);
+		System.out.println("DVD:"+title+","+director);
 	}
 
 }
