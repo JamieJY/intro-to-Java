@@ -23,11 +23,47 @@ public class DVD extends Item {
 	}
 
 
+	
+	
+
+//----write your own toString 
+	@Override
+	public String toString() {
+		return "DVD [director=" + director + ", toString()=" + super.toString() + "]";
+	}
+
+
+
+
+
+// ----write your own equals ,这个equals会取代object里的equals函数，所以66行的equals调用的是override的equals
+	//如果把这里的函数名称
+	//@Override
+	public boolean equals(DVD obj,int i) {
+		// TODO Auto-generated method stub
+		//return super.equals(obj);
+		//向下造型
+		DVD dd=(DVD)obj;
+		return director.equals(dd.director);
+	}
+
+
+
+
+
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		DVD dvd = new DVD("a","b",1,"..");
+		DVD dvd1 = new DVD("a","b",1,"..");
 		dvd.print();
+		String s="ab"+dvd;
+		System.out.println(dvd.toString());
+		System.out.println(dvd);
+		System.out.println(s);
+		System.out.println("------------");
+		
+		System.out.println(dvd.equals(dvd1));
 	}
 
 
@@ -37,7 +73,7 @@ public class DVD extends Item {
 		//System.out.println("DVD:"+title+","+director);
 		System.out.print("DVD:");
 		super.print();
-		System.out.print(director);
+		System.out.println(director);
 	}
 
 }
