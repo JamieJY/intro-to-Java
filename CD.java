@@ -25,7 +25,7 @@ public class CD extends Item {
 	}
 
 	public void print() {
-		// TODO Auto-generated method stub
+		// title-> super.print() 
 		//System.out.println("CD:"+title+","+artist);
 	}
 

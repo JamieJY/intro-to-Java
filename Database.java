@@ -48,6 +48,8 @@ public class Database {
 		db.add(new DVD("ghi","ghi",100,"..."));
 		db.add(new DVD("xxx","ghi",100,"..."));
 		
+		
+		db.add(new VideoGame("ddd",10,true,"...",4));
 		db.list();
 	}
 

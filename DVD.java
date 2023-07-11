@@ -37,9 +37,9 @@ public class DVD extends Item {
 
 
 // ----write your own equals ,这个equals会取代object里的equals函数，所以66行的equals调用的是override的equals
-	//如果把这里的函数名称
-	//@Override
-	public boolean equals(DVD obj,int i) {
+	//如果把这里的函数名称改成public boolean equals(DVD obj,int i)，多了参数int i，执行程序又会去调用object的equals，结果就是false
+	@Override
+	public boolean equals(Object obj) {
 		// TODO Auto-generated method stub
 		//return super.equals(obj);
 		//向下造型
